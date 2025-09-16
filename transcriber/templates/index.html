@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Transcriber & Translator</title>
+    <link rel="stylesheet" href="{% static 'transcriber/style.css' %}">
+</head>
+<body>
+    <h1>YouTube Transcriber & Translator System</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Process Video</button>
+    </form>
+</body>
+</html>
